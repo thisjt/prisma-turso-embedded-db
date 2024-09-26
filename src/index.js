@@ -1,8 +1,9 @@
 import http from 'http';
+import fs from 'fs';
 
-import prisma, { libsql } from './prisma';
+import prisma, { libsql } from './prisma.js';
 
-const httpServer = http.createServer({}, async (request, response) => {
+const httpServer = http.createServer(async (request, response) => {
 	const url = new URL(`${request.url}`, `http://${request.headers.host}`);
 	response.writeHead(200, { 'content-type': 'application/json' });
 
@@ -37,6 +38,8 @@ const httpServer = http.createServer({}, async (request, response) => {
 	} else if (url.pathname === '/sync') {
 		await libsql.sync();
 		response.end(JSON.stringify({ sync: true }));
+	} else {
+		response.end(JSON.stringify({ error: 404 }));
 	}
 });
 
