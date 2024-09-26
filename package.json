@@ -1,0 +1,21 @@
+{
+	"name": "prisma-turso-embedded-db",
+	"version": "0.0.1",
+	"author": "thisjt",
+	"description": "A minimum reproducible code to make Embedded DB work with Turso and Prisma.",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/thisjt/prisma-turso-embedded-db.git"
+	},
+	"scripts": {},
+	"devDependencies": {
+		"@libsql/client": "^0.14.0",
+		"@prisma/adapter-libsql": "^5.20.0",
+		"@prisma/client": "^5.20.0",
+		"dotenv-vault": "^1.26.2",
+		"prettier": "^3.3.3",
+		"prisma": "^5.20.0",
+		"typescript": "^5.6.2"
+	},
+	"type": "module"
+}
