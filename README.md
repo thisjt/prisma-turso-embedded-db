@@ -13,12 +13,13 @@ A minimum reproducible code to make Embedded DB work with Turso and Prisma.
    - http://localhost:3010/save?value=x (replace x with random test data or string)
      - keep in mind that running this also autoruns the sync command after based on observation
        as when the Turso database online viewer is refreshed, data is already present there
-   - http://localhost:3010/load (load data from local database)
+   - http://localhost:3010/load
+     - load data from local database
    - http://localhost:3010/sync
-     - add test data in Turso database online first
-     - then refresh sqlite db viewer application, there is missing data
-     - load sync url above
-     - then refresh sqlite db viewer application again, missing data is filled up
+     1. add test data in Turso database online first
+     2. then refresh sqlite db viewer application, there is missing data
+     3. load sync url above
+     4. then refresh sqlite db viewer application again, missing data is filled up
 
 ## What lines of code are important?
 
